@@ -8,13 +8,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
-    <title>Home/Twitter</title>
+    <title>Bookmarks/Twitter</title>
 </head>
 <body>
     <header>
         <div class="fixed">
            <button class="active-btn" onclick="activeSidebar()"> <img width="30" height="35px" style="border-radius: 50%; margin:15px 7px;"  src="images/profile.jpg" alt=""> </button>
-            <h1>Home</h1>
+            <h1>Bookmarks</h1>
             <i class="fa-regular fa-star"></i>
          </div>
          <div class="fixed-mobile">
@@ -34,10 +34,10 @@
             <i id="plus" class="fa-light fa-plus"></i>
             <p><strong>Yılmaz</strong> <br> <span style="padding: 0; color: gray;">@userylmz</span>
             <br> <br> <strong>500</strong> <span style="padding: 0;">Fallowing</span style="padding:0;"> <strong>400</strong> <span style="padding: 0;">Fallowers</span> </p>
-            <a href=""><i class="fa-regular fa-user"></i><span>Profile</span></a> 
-            <a href=""><i class="fa-solid fa-list"></i><span>Lists</span></a>
-            <a href=""><i class="fa-solid fa-location-dot"></i><span>Topics</span></a>
-            <a href=""><i class="fa-regular fa-bookmark"></i><span>Bookmarks</span></a>
+            <a href="profile.html"><i class="fa-regular fa-user"></i><span>Profile</span></a> 
+            <a href="lists.html"><i class="fa-solid fa-list"></i><span>Lists</span></a>
+            <a href="explore.html"><i class="fa-solid fa-location-dot"></i><span>Topics</span></a>
+            <a href="bookmarks.html"><i class="fa-regular fa-bookmark"></i><span>Bookmarks</span></a>
             <a href=""><i class="fa-solid fa-bolt"></i><span>Moments</span></a>
             <a href=""><i class="fa-regular fa-newspaper"></i><span>NewsLetters</span></a>
             <a href=""><i class="fa-solid fa-rocket"></i><span>Proffessionals</span></a>
@@ -76,21 +76,7 @@
             <p style="float:right; margin-left:-5px; font-weight: bold;
             font-size: 2vh;">...</p>
          </div>
-         <div class="sidebar-top">
-         <div style="display: flex;">
-            <img style="margin-left: 15px; border-radius: 50%;" width="45" height="55px" src="images/profile.jpg" alt="">
-            <input placeholder="What's happening?" type="text">
-         </div>
-         <div class="sidebar-top-icon">
-         <a href=""><i class="fa-regular fa-image"></i></a>
-         <a href=""><i class="fa-solid fa-gift"></i></a>
-         <a href=""><i class="fa-solid fa-square-poll-horizontal"></i></a>
-         <a href=""><i class="fa-regular fa-face-grin"></i></i></a>
-         <a href=""><i class="fa-regular fa-calendar"></i></a>
-         <a href=""><i class="fa-solid fa-location-dot"></i></a>
-         <button>Tweet</button>
-        </div>
-        </div>
+       
         <div>
             <button class="tweet-btn-mobile">+<i class="fa-solid fa-feather"></i></button>
         </div>
@@ -172,13 +158,53 @@
            </div>
            <a style="font-weight: normal; position:relative; top: -5px; color:rgb(29, 155, 240);" href="">Show more</a>
           </div>
-          <div class="messages-container">
-           <h2 style="padding-left:10px; font-size: 2.3vh;">Messages</h2>
-           <div class="messages-icon-box">
-            <a href=""><i class="fa-solid fa-envelope-circle-check"></i></a>
-            <a href=""><i class="fa-solid fa-chevron-up"></i></a>
+          <div onclick="activeMessages()" class="messages-container">
+            <h2 style="padding-left:10px; font-size: 2.3vh;">Messages</h2>
+            <div class="messages-icon-box">
+             <a href=""><i class="fa-solid fa-envelope-circle-check"></i></a>
+             <a href=""><i class="fa-solid fa-chevron-up"></i></a>
+            </div>
            </div>
-          </div>
+            <div id="onMessageBox">
+             <h3 style="margin-left: 10px;">Messages</h3>
+             <i onclick="offMessageBox()" id="off" style="float:right; margin-right:10px; position:relative; top:-40px;" class="fa-solid fa-x"></i>
+             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
+                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                 </a>
+                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+             </div>
+             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
+                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                 </a>
+                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+             </div>
+             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
+                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                 </a>
+                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+             </div>
+             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
+                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                 </a>
+                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+             </div>
+             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
+                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                 </a>
+                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+             </div>
+             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
+                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                 </a>
+                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+             </div>
+            </div>
           <div class="follow-container">
             <h2 style="font-size: 2.4vh; padding-left:15px; padding-top: 10px;">Who to follow</h2>
             <div class="followbox">
@@ -216,9 +242,20 @@
           </div>
           <div class="empty">
           </div>
-    </div>
     </header>
     <main>
+        <div class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/follow.jpg" alt="">
+            <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
+                </a>
+                <p>Bugün cenazede helvanın yanına dondurma istedim.</p>
+                <div class="tweet-icon-box">
+                    <i class="fa-regular fa-comment"></i>
+                    <i class="fa-solid fa-retweet"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-solid fa-arrow-up-from-bracket"></i> 
+                </div>
+        </div>
         <div class="tweet-box">
           <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/follow.jpg" alt="">
           <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
@@ -230,7 +267,7 @@
               <div class="tweet-icon-box">
                   <i class="fa-regular fa-comment"></i>
                   <i class="fa-solid fa-retweet"></i>
-                  <i class="fa-regular fa-heart"></i>
+                  <i style="color: red;" class="fa-solid fa-heart"><span style="margin-left:15px; color:rgb(177, 177, 177); font-size: 12px;">1</span></i>
                   <i class="fa-solid fa-arrow-up-from-bracket"></i> 
               </div>
       </div>
