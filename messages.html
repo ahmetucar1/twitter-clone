@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Home/Twitter</title>
+</head>
+<body>
+    <header>
+        <div class="fixed">
+           <button class="active-btn" onclick="activeSidebar()"> <img width="30" height="35px" style="border-radius: 50%; margin:15px 7px;"  src="images/profile.jpg" alt=""> </button>
+            <h1>Messages</h1>
+            <i style="padding-right: 35px;" class="fa-solid fa-gear"></i>
+            <i class="fa-solid fa-envelope-circle-check"></i>
+         </div>
+         <div class="fixed-mobile">
+            <button style="background-color: white; z-index:1;" class="active-btn" onclick="activeSidebar()"> 
+                <img width="30" height="35px" style="border-radius: 50%; margin:15px 7px;"  src="images/profile.jpg" alt=""> 
+            </button>
+             <h1>Messages</h1>
+             <i style="padding-right: 35px;" class="fa-solid fa-gear"></i>
+          </div>
+        <div class="public">
+         <div id="sidebarLeftMobile">
+            <h2 style="position: absolute; font-size: 15px; margin-left:-15px; margin-top: 15px; top: 0;">Account İnfo</h2>
+            <button type="button" onclick="closeSidebar()" id="close" aria-hidden="true">&times;</button>
+            <a href="">
+                  <img height="45px" width="35px" style="border-radius: 50%;" src="images/profile.jpg" alt="">
+            </a>
+            <i id="plus" class="fa-light fa-plus"></i>
+            <p><strong>Yılmaz</strong> <br> <span style="padding: 0; color: gray;">@userylmz</span>
+            <br> <br> <strong>500</strong> <span style="padding: 0;">Fallowing</span style="padding:0;"> <strong>400</strong> <span style="padding: 0;">Fallowers</span> </p>
+            <a href=""><i class="fa-regular fa-user"></i><span>Profile</span></a> 
+            <a href=""><i class="fa-solid fa-list"></i><span>Lists</span></a>
+            <a href=""><i class="fa-solid fa-location-dot"></i><span>Topics</span></a>
+            <a href=""><i class="fa-regular fa-bookmark"></i><span>Bookmarks</span></a>
+            <a href=""><i class="fa-solid fa-bolt"></i><span>Moments</span></a>
+            <a href=""><i class="fa-regular fa-newspaper"></i><span>NewsLetters</span></a>
+            <a href=""><i class="fa-solid fa-rocket"></i><span>Proffessionals</span></a>
+            <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Twitter Ads</span></a>
+            <a href=""><i class="fa-solid fa-chart-simple"></i><span>Analytics</span></a>
+            <a href=""><i class="fa-solid fa-gear"></i><span>Setting & Privacy</span></a>
+            <a href=""><i class="fa-solid fa-question"></i><span style="padding-left: 25px;">Help Center</span></a>
+            <a href=""><i class="fa-solid fa-database"></i><span>Data Saver</span>
+            <label class="toggle-switch">
+            <input type="checkbox" checked>
+            <span class="switch-box circle"></span>
+            </label>
+            </a>
+            <a href=""><i class="fa-solid fa-display"></i><span style="padding-left: 14px;">Display</span></a>
+            <hr>
+            <a href=""><span>Log out</span></a>
+        </div>   
+        <div class="sidebar-left">
+        <div class="navbar">
+         <a href="index.html"><i><img width="30" src="images/Twitter-logo.svg"  alt=""></i></a>
+         <a href="index.html"><i class="fa-solid fa-house-chimney-window"></i><span style="font-weight: bold; font-size:2.6vh;">Home</span></a>
+         <a href="explore.html"><i class="fa-regular fa-hashtag"></i><span>Explore</span></a>
+         <a href="notifications.html"><i class="fa-regular fa-bell"></i><span>Notifications</span></a>
+         <a href="messages.html"><i class="fa-regular fa-envelope"></i><span>Messages</span></a>
+         <a href="bookmarks.html"><i class="fa-regular fa-bookmark"></i><span>Bookmarks</span></a>
+         <a href="lists.html"><i class="fa-solid fa-list"></i><span>Lists</span></a>
+         <a href="profile.html"><i class="fa-regular fa-user"></i><span>Profile</span></a>
+         <a href=""><i class="fa-solid fa-ellipsis"></i><span>More</span></a>
+         <button class="twet-btn" >Tweet</button>
+         <button class="twet-btn-circle">+<i class="fa-solid fa-feather-pointed"></i></button>
+        </div>
+    </div>
+         <div class="sidebar-sub">
+            <img height="55px" width="45px" style="border-radius: 50%;" src="images/profile.jpg" alt="">
+            <p><strong>yılmaz</strong><br> <span style="color:rgba(128, 128, 128, 0.796);">@userylmz</span></p>
+            <p style="float:right; margin-left:-5px; font-weight: bold;
+            font-size: 2vh;">...</p>
+         </div>
+         <div class="bottombox">
+            <a href="index.html"><i class="fa-solid fa-house-chimney-window"></i></a>
+            <a href="explore.html"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <a href="notifications.html"><i class="fa-regular fa-bell"></i></a>
+            <a href="messages.html"><i class="fa-regular fa-envelope"></i></a>
+        </div>
+        <div class="rightbox">
+            <div>
+                <h3 style="font-size: 3vh; position:relative; top: 300px;" >Select a message</h3>
+                <p style="color: gray; position:relative; top: 300px;">Choose from your existing conversations, start a new one or just keep swimming</p>
+                <button style="padding: 10px 20px; top:300px;" class="twet-btn messages-btn">Nev Message</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="search-container messages-search">
+            <form action="">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+              <input type="text" placeholder="Search Twitter" name="search">
+            </form>
+          </div>
+        <div style="margin-top: 10px; height: 80px;"  class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+        <div style="margin-top: 10px; height: 80px;" class="tweet-box">
+            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
+            <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+            </a>
+            <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
+        </div>
+    </main>
+</body>
+</html>
