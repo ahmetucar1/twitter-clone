@@ -3,8 +3,9 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-
+.gray1 {
+    color: rgba(128, 128, 128, 0.796);
+}
 
 .sidebar-left {
     border-right: .1px solid rgb(218, 218, 218);
@@ -81,6 +82,9 @@ body {
     top: -10px;
 }
 
+.sidebar-sub span {
+    color: -gray1;
+}
 
 .fixed {
     position: fixed;
@@ -89,7 +93,6 @@ body {
     top: 0;
     left: 20.1%;
     width: 40%;
-    max-width: 60%;
     display: flex;
     z-index: 1;
     background-color: white;
@@ -109,6 +112,13 @@ body {
     margin-top: 10px;
 }
 
+.fixed img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%; 
+    margin:15px 7px;
+}
+
 .sidebar-top {
     border-right: .1px solid rgb(218, 218, 218);
     border-bottom: .1px solid rgb(218, 218, 218);
@@ -120,6 +130,12 @@ body {
     height: auto;
     background-color: rgb(258 255 255 / 1);
     overflow: visible;
+}
+
+.sidebar-top-item {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 12px;
 }
 
 input {
@@ -163,24 +179,28 @@ input[type=text]:focus {
     border: 1px none rgb(29, 155, 240);
     border-radius: 100px;
     position: absolute;
-    top: 55px;
+    top: 50px;
     right: 0;
     margin-right: 10px;
 }
 
-.fixed-mobile {
-    display: none;
+.sticky {
+    position: sticky;
+    top: -600px;
+    height: 180%;
+    background-color: green;
+    z-index: 1;
 }
 
 .rightbox {
-    position: absolute;
-    display: block;
-    top: 0;
-    right: 0;
-    width: 31%;
-    height: 165%;
-    margin-top:1px;
+    position:absolute ;
+    margin-top: -5.2%;
+    right: 2%;
+    width: 29%;
+    height: 180%;
 }
+
+
 
 .search-container input[type=text] {
     background-color: rgb(239 243 244);
@@ -230,8 +250,19 @@ input[type=text]:focus {
     font-weight: bold;
     color: #000;
 }
+
+.trend-container h2 {
+    font-size: 2.4vh; 
+    padding-left:15px; 
+    padding-top: 10px;
+}
+
 .trendbox {
   height: 77px;
+}
+
+.trendbox button {
+    float: right;
 }
 
 .trendbox:hover {
@@ -266,6 +297,12 @@ input[type=text]:focus {
     display: block;
 }
 
+.follow-container h2 {
+    font-size: 2.4vh; 
+    padding-left:15px; 
+    padding-top: 10px;
+}
+
 .followbox {
     height: 77px;
 }
@@ -277,7 +314,6 @@ input[type=text]:focus {
 
 .followbox a {
     position: relative;
-    top: -30px;
     text-decoration: none;
     font-weight: bold;
     color: #000;
@@ -303,11 +339,26 @@ input[type=text]:focus {
     font-weight: bold;
 }
 
+.show-more {
+    font-weight: lighter; 
+    position:relative; 
+    top: -5px; 
+    left: 10px;
+    color:rgb(29, 155, 240);
+}
+
+.messages {
+    overflow-y: scroll;
+    scrollbar-color: black;
+    scroll-padding: 10px;
+}
+
 .messages-container {
     background-color: white;
     position: fixed;
     top: 93.7%;
-    width: 27%;
+    margin-left: 33px;
+    width: 25%;
     height: 70px;
     display: flex;
     border-radius: 15px;
@@ -326,6 +377,10 @@ input[type=text]:focus {
 .messages-icon-box i {
     padding-left: 20px;
     color: rgb(123, 122, 122);
+}
+
+.messages-container h2 {
+    padding-left:10px; font-size: 2.3vh;
 }
 
 .empty {
@@ -356,15 +411,13 @@ input[type=text]:focus {
     color: rgb(153, 153, 153)
 }
 
-main {
+.tweets-container {
     position: relative;
     top: 28px;
     left: 25%;
     width: 53.6%;
-    height: 2000px;
     border-right: .1px solid rgb(218, 218, 218);
     margin: 0;
-    overflow: scr;
 }
 
 .tweet-box {
@@ -372,12 +425,13 @@ main {
     top: 10px;
     left: 25%;
     width: 71.2%;
+ 
     border-bottom: .1px solid rgb(218, 218, 218);
 }
 
 .tweet-img-box {
     position: relative;
-    top: -40px;
+    top: -20px;
 }
 
 .tweet-img {
@@ -385,6 +439,8 @@ main {
     left: 30px;
     border-radius: 20px;
     box-shadow: 0px 0px .17px rgb(202, 202, 202);
+    width: 370px;
+    height: 400px;
 }
 
 .tweet-box:hover {
@@ -395,9 +451,9 @@ main {
     background-color: white;
     position: fixed;
     width: 27%;
-    height: 500px;
-    top: 50%;
-    right: -600px;
+    height: 600px;
+    top: 49%;
+    right: -1900px;
     z-index: 1;
     box-shadow: 20px 20px 50px 15px grey;
     border: .1px solid rgb(198, 198, 198);
@@ -406,13 +462,109 @@ main {
 }
 
 #onMessageBox.on {
-    right: 45px;
+    right: 40px;
 }
 
 #onMessageBox.off {
-    right: -600px;
+    right: -1900px;
 }
 
+#onMessageBox h3 {
+    margin-left: 10px;
+}
+
+#onMessageBox i {
+    float:right; 
+    margin-right:10px; 
+    position:relative; 
+    top:-40px;
+}
+
+.messages-box {
+    height: 80px;
+    max-height: 300px;
+    border-bottom: .1px solid rgb(218, 218, 218);
+}
+
+.messages-box:hover {
+    background-color: rgb(239 243 244);
+}
+
+.messages-box img {
+    margin: 5px;
+}
+
+.messages-box a {
+    position: relative;
+    top: -30px;
+    left: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.messages-box span {
+    color: gray;
+    font-weight: lighter;
+}
+
+.messages-box p {
+    position: relative;
+    top: -40px;
+    left:70px;
+    color: gray;
+    font-size: 1.7vh;
+}
+
+.explore {
+    top: 80px;
+}
+
+.bookmarks {
+    top: 80px;
+}
+
+.lists {
+    top: 80px;
+}
+
+.lists-container {
+    height: 2000px;
+}
+
+.lists a {
+    left: 15px;
+}
+
+.listbox {
+    width: 60px;
+    height: 55px;
+    background-color: rgb(219, 219, 219);
+    border-radius: 10px;
+    position: relative;
+    left: 13px;
+    display: block;
+}
+
+#listIcon {
+    position: absolutle; 
+    top: 7px; 
+    left: -5px
+}
+
+.list-text {
+    position: relative;
+    margin: 50px 0 0 -40px; 
+    color: gray;
+}
+
+.profile {
+    top: 80px;
+}
+
+#like {
+    color: red;
+}
 
 @media only screen and (min-width: 300px) {
    .sidebar-left {
@@ -428,37 +580,21 @@ main {
    }
 
    .fixed {
-    display: none;
+    left: -1px;
+    width: 100%;
+    height: 60px;
+   }
+
+   .fixed h1 {
+     margin-top: 20px;
    }
 
    .sidebar-top {
     display: none;
    }
 
-   main {
+   .tweets-container {
     border: none;
-   }
-
-   .fixed-mobile {
-    position: fixed;
-    display: flex;
-    width: 100%;
-    max-width: 100%;
-    z-index: 1;
-    background-color: white;
-    top: 0;
-   }
-
-   .fixed-mobile h1 {
-    font-size: 2.4vh;
-    padding-top: 15px;
-   }
-
-   .fixed-mobile i {
-    position: fixed;
-    right: 0;
-    padding-right: 12px;
-    padding-top: 24px;
    }
 
    #sidebarLeftMobile {
@@ -467,13 +603,22 @@ main {
     border-right: .1px solid rgb(218, 218, 218);
     box-sizing: border-box;
     position: absolute;
-    width: 65%;
-    max-width: 70%;
+    width: 70%;
+    height: 140%;
     top: 0;
-    left: -440px;
-    padding: 15% 7%;
+    left: -1840px;
+    padding: 13% 7%;
     z-index: 1;
+    overflow: scroll;
    }
+
+   #sidebarLeftMobile h2 {
+    position: absolute; 
+    font-size: 15px; 
+    margin-left:-15px; 
+    margin-top: 15px; 
+    top: 0;
+  }
 
   #sidebarLeftMobile.active
     {
@@ -482,8 +627,36 @@ main {
 
    #sidebarLeftMobile.close
     {
-    left: -440px;
+    left: -1840px;
    }
+
+   .circle-img {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+   }
+
+   .circle-img-2 {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    margin: 0 10px;
+   }
+
+   .circle-img-3 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 20px 0 0 5px;
+   }
+
+   .circle-img-4 {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 40px 0 0 5px;
+   }   
+
 
    .active-btn {
     background-color: white;
@@ -492,7 +665,7 @@ main {
 
    #close {
     float: right;
-    margin-top: -65px;
+    margin-top: -55px;
     margin-right: -25px;
     font-size: 30px;
     color: #000;
@@ -502,19 +675,71 @@ main {
   }
 
   #plus {
+    position: relative;
     background-color:white; 
-    border-radius:50% solid;  
-    float:right; 
-    font-size:30px;
-    position: absolute;
-    right: 0;
-    top: 103px;
-    padding-right: 25px;
+    border-radius: 50%;
+    border: .1px solid black;  
+    left: 190px;
+    font-size: 30px;
+    top: -53px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
   }
 
-  #sidebarLeftMobile p {
-    margin-top: 10px;
+  .notifications-box p {
+    position: absolute;
+    margin: 40px 0 0 0;
   }
+
+  .user-info {
+    position: relative;
+    top: -55px;
+    width: 90px;
+    display: block;
+    color: black;
+    font-weight: bold;
+  }
+
+  .user-follow-info {
+    position: relative;
+    width: 210px;
+    height: 20px;
+    top: 100px;
+
+    font-size: 2vh;
+
+  }
+
+  .username {
+    position: relative; 
+    top: -70px;
+    font-size: 1.7vh;
+  }
+
+ .bold {
+    font-weight: bold;
+ }
+
+ .light {
+    font-weight: lighter;
+ }
+
+  .user-follow-info {
+    position: relative;
+    top: -70px;
+  }
+
+  .navbar-mobile a {
+    position: relative;
+    top: -60px;
+  }
+
+  .navbar-mobile span {
+     padding-left: 20px;
+  }
+
+
 
   #sidebarLeftMobile a {
     display: block;
@@ -530,10 +755,6 @@ main {
 
   #sidebarLeftMobile a:hover {
     background-color:rgb(239 243 244);
-  }
-
-  #sidebarLeftMobile span {
-    padding-left: 20px;
   }
 
   .toggle-switch {
@@ -593,6 +814,74 @@ main {
     border-radius: 50%;
     }
 
+    .explore-img-box {
+        position: relative;
+        top: 10px;
+        left: -45%;
+        width: 180%;
+        height: 200px;
+        background-image: url(/images/explore.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .explore-img-box p {
+        color: white; 
+        font-size: 1.8vh; 
+        position: relative; 
+        padding-top: 150px;
+        padding-left: 10px;
+    }
+    
+    .explore-img-box span {
+        font-size: 2.7vh; 
+     }
+    
+    .trend-container-explore {
+        background-color: white;
+        border-radius: 16px;
+        margin-top: 15px;
+        position: relative;
+        width: 182.7%;
+        height: auto;
+        left: -46.6%;
+        display: block;
+    }
+    
+    .trend-container-explore a {
+        padding-left: 10px;
+        position: relative;
+        top: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+    }
+    .explore-trendbox {
+      height: 77px;
+    }
+    
+    .explore-trendbox:hover {
+        border: none;
+        background-color: rgb(230, 232, 233);
+    }
+    
+    .trend-container-explore p {
+        padding-left: 10px;
+        padding-top: -50px;
+        font-weight: lighter;
+        color: rgb(153, 153, 153);
+    }
+    
+    .trend-container-explore button {
+        position: relative;
+        top: -70px;
+        margin-right: 15px;
+        border: none;
+        font-size: 3vh;
+        background: none;
+    }
+
     .search-container input[type=text] {
         background-color: rgb(239 243 244);
         margin-top: 15px;
@@ -619,14 +908,14 @@ main {
     .tweet-box {
         position: relative;
         top: 25px;
-        left: -102px;
-        width: 184%;
-        height: auto;
+        left: -100px;
+        width: 180%;
     }
 
     .tweet-box a {
         position: relative;
-        top: -30px;
+        top: -25px;
+        left: 10px;
         text-decoration: none;
         color: #000;
         font-weight: bold;
@@ -635,12 +924,13 @@ main {
     .tweet-box span {
         color: rgb(83, 100, 113);
         font-weight: lighter;
+        position: relative;
     }
 
     .tweet-box p {
         position: relative;
         top: -35px;
-        left: 48px;
+        left: 59px;
         font: 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     }
 
@@ -656,6 +946,7 @@ main {
         left: -15px;
         float: left;
         padding: 0 45px;
+        margin-top: 10px;
        }
     
     .tweet-img-box {
@@ -694,85 +985,12 @@ main {
         padding: 3%;
     }
 
-    .explore-img-box {
-        position: relative;
-        top: 10px;
-        left: -45%;
-        width: 185%;
-        height: 210px;
-        background-image: url(/images/explore.jpeg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    
-    .profile-background {
-        position: relative;
-        top: 10px;
-        left: -45%;
-        width: 185%;
-        height: 210px;
-        background-image: url(/images/kapak.jpeg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
+    .messages {
+       overflow: visible;
     }
 
-    .explore-img-box p {
-        color: white; 
-        font-size: 1.8vh; 
-        position: relative; 
-        padding-top: 145px;
-        padding-left: 10px;
-    }
-
-    .explore-img-box span {
-        font-size: 2.7vh; 
-        font-weight: bold;
-    }
-
-    .trend-container-explore {
-        background-color: white;
-        border-radius: 16px;
-        margin-top: 15px;
-        position: relative;
-        width: 82.7%;
-        height: auto;
-        left: -45.6%;
-        display: block;
-    }
-    
-    .trend-container-explore a {
-        padding-left: 10px;
-        position: relative;
-        top: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        color: #000;
-    }
-    .explore-trendbox {
-      height: 77px;
-    }
-    
-    .explore-trendbox:hover {
-        border: none;
-        background-color: rgb(230, 232, 233);
-    }
-    
-    .trend-container-explore p {
-        padding-left: 10px;
-        padding-top: -10px;
-        font-weight: lighter;
-        color: rgb(153, 153, 153);
-    }
-    
-    .trend-container-explore button {
-        position: relative;
-        top: -80px;
-        margin-right: -235px;
-        border: none;
-        font-size: 3vh;
-        background: none;
+    .messages-item {
+        height: 70px;
     }
 
     .messages-search {
@@ -782,19 +1000,50 @@ main {
         width: 120%;
     }
 
+    .lists-container {
+        top: 60px;
+      }
+
+      #listIcon {
+        position: absolutle; 
+        top: 7px;
+        left: -25px; 
+    }    
+
+    .profile-background {
+        position: relative;
+        top: 30px;
+        left: -46%;
+        width: 185%;
+        height: 170px;
+        background-image: url(/images/kapak.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
     .profile-box {
         display: flex;
         position: relative;
         top: -25px;
-        left: -45%;
-        width: 185%;
-
+        left: 17%;
+        width: 82%;
+    }
+    
+    
+    .profile-box img {
+        width: 90px; 
+        height: 90px;
+        border-radius: 50%; 
+        border: 3px solid white; 
+        margin-left: -135px;
+        margin-top: 10px;
     }
     
     .edit-profile-btn {
         position: absolute;
-        top: 47px;
-        right: 15px;
+        top: 65px;
+        right: -85px;
         border-radius: 20px;
         background-color: white;
         border: .1px solid rgb(201, 201, 201);
@@ -803,17 +1052,86 @@ main {
         font-size: 1.7vh;
        }
     
-    .profile-user-box {
+       .profile-user-box {
         position: relative;
-        width: 178.5%;
-        left: -41%;
-        top: -10px;
-    }   
-
+        width: 139.5%;
+        left: -40%;
+        top: -30px;
+    }
+    
     .profile-user-box i {
         position: relative;
-        top: -17px;
+        top: -18px;
     }
+    
+    .profile-user-box p {
+        margin-left: 10px;
+    }
+    
+    #dot {
+        position: relative;
+        top: -2px;
+        left: 10px;
+    }
+    
+    #days {
+        position: relative;
+        top: -3px;
+        left: 30px;
+    }
+    
+    .profile-text {
+        position: relative;
+        left: 15px;
+        top: -3px;
+    }
+    
+    .profile-text-2 {
+        position: relative;
+        top: -3px;
+        left: 40px;
+      }
+    
+      .profile-twet {
+        border-top: .1px solid rgb(218, 218, 218);
+        top: 0;
+      }
+    
+    .profile-twet img {
+        position: relative;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        top: 14px;
+        left: -145px;
+      }
+    
+      .pinned {
+        font-size: 1.5vh;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        left: 10px;
+        top: -3px;
+        }
+    
+        #pinned {
+            position: relative;
+            top: -5px;
+            left: 30px;
+        }
+    
+        .profile-twet a{
+            position: relative;
+            left: -140px;
+            top: -5px;
+        }
+    
+        .profile-twet p{
+            position: relative;
+            left: 70px;
+            top: -5px;
+            margin-bottom: 35px;
+        }
 
 }
 
@@ -877,10 +1195,6 @@ main {
  .fixed img {
     display: none;
  }
-
- .fixed-mobile {
-    display: none;
-   }
    
  .sidebar-top {
     display: block;
@@ -892,7 +1206,7 @@ main {
     font-size: 2.1vh;
  } 
 
- main {
+ .tweets-container {
     border-right: .1px solid rgb(218, 218, 218);
     left: 5.5%;
     width: 70.9%;
@@ -944,7 +1258,7 @@ main {
     position: relative;
     padding-right: 50px;
     top: -60px;
-    left: 48px;
+    left: 58px;
     font: 2vh -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
 }
 
@@ -952,7 +1266,7 @@ main {
     position: relative;
     display: inline-flex;
     left: 34px;
-    top: -25px;
+    top: -5px;
    }
 
    .tweet-box i {
@@ -980,17 +1294,20 @@ main {
     background-size: cover;
 }
 
-.profile-background {
+
+.notifications-box p {
     position: relative;
-    top: 30px;
-    left: 17%;
-    width: 82%;
-    height: 250px;
-    background-image: url(/images/kapak.jpeg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    left: 10px; 
+    top: -10px
+  }
+
+  .bookmarks-container {
+    top: 40px;
+  }
+
+  .lists-container {
+    top: 60px;
+  }
 
 .explore-img-box p {
     color: white; 
@@ -1048,11 +1365,31 @@ main {
     background: none;
 }
 
+.messages-item {
+    height: 70px;
+}
+
+.messages {
+  top: 30px;
+}
+
 .messages-search {
     position:relative;
     left: 18%;
-    top: 5px;
+    top: 20px;
     width: 56%;
+}
+
+.profile-background {
+    position: relative;
+    top: 30px;
+    left: 17%;
+    width: 82%;
+    height: 250px;
+    background-image: url(/images/kapak.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .profile-box {
@@ -1061,6 +1398,15 @@ main {
     top: -25px;
     left: 17%;
     width: 82%;
+}
+
+
+.profile-box img {
+    width: 115px; height: 115px;
+    border-radius: 50%; 
+    border: 3px solid white; 
+    margin-left: 5px;
+    margin-top: -15px;
 }
 
 .edit-profile-btn {
@@ -1085,6 +1431,86 @@ main {
 .profile-user-box i {
     position: relative;
     top: -18px;
+}
+
+.profile-user-box p {
+    margin-left: 10px;
+}
+
+#dot {
+    position: relative;
+    top: -2px;
+    left: 10px;
+}
+
+#days {
+    position: relative;
+    top: -3px;
+    left: 30px;
+}
+
+.profile-text {
+    position: relative;
+    left: 15px;
+    top: -3px;
+}
+
+.profile-text-2 {
+    position: relative;
+    top: -3px;
+    left: 40px;
+  }
+
+  .profile-twet {
+    border-top: .1px solid rgb(218, 218, 218);
+  }
+
+.profile-twet img {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    top: 14px;
+    left: -145px;
+  }
+
+  .pinned {
+    font-size: 1.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 10px;
+    top: -3px;
+    }
+
+    #pinned {
+        position: relative;
+        top: -5px;
+        left: 30px;
+    }
+
+    .profile-twet a{
+        position: relative;
+        left: -140px;
+        top: -5px;
+    }
+
+    .profile-twet p{
+        position: relative;
+        left: 50px;
+        top: -5px;
+        margin-bottom: 35px;
+    }
+
+#listIcon {
+    position: absolutle; 
+    top: 7px;
+    left: -5px; 
+} 
+
+.list-text {
+    position: relative;
+    margin: 70px 0 0 -40px; 
+    color: gray;
 }
 
 }
@@ -1128,7 +1554,7 @@ main {
 
     .sidebar-sub p {
         display: block;
-        padding-left: 10px;
+        padding-left: -25px;
        }
 
     .sidebar-sub img {
@@ -1165,14 +1591,19 @@ main {
         display: flex;
      }
 
-    main {
-        width: 59.8%;
+    .tweets-container {
+        width: 59.9%;
         left: 7.2%;
+        top: 50px;
     }
 
     .rightbox {
         display: block;
        }
+
+    .notifications {
+        top: 80px;
+    }
 
        .search-container input[type=text] {
         background-color: rgb(239 243 244);
@@ -1204,14 +1635,15 @@ main {
 
     .tweet-box {
         position: relative;
-        top: 10px;
+        top: 20px;
         left: 29.9%;
         width: 70%;
     }
 
+
     .tweet-box a {
         position: relative;
-        top: -30px;
+        top: -40px;
         text-decoration: none;
         color: #000;
         font-weight: bold;
@@ -1219,7 +1651,7 @@ main {
 
     .tweet-box img {
         position: relative;
-        top: 5px;
+        top: -15px;
     }
     
 
@@ -1230,15 +1662,22 @@ main {
 
     .tweet-box p {
         position: relative;
-        top: -35px;
-        left: 48px;
+        top: -40px;
+        left: 58px;
         font: 2vh -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
     }
+
+
+      .notifications-box p {
+        position: relative;
+        left: 10px; 
+        top: -10px
+      }
 
     .tweet-icon-box {
         position: relative;
         display: inline-flex;
-        top: -10px;
+        top: 10px;
         left: 10px;
     }
 
@@ -1260,17 +1699,6 @@ main {
         background-size: cover;
     }
 
-    .profile-background {
-        position: relative;
-        top: 35px;
-        left: 30.3%;
-        width: 69.5%;
-        height: 170px;
-        background-image: url(/images/kapak.jpeg);
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
 
     .explore-img-box p {
         color: white; 
@@ -1350,7 +1778,7 @@ main {
     
     .followbox a {
         position: relative;
-        top: -30px;
+        top: -21px;
         text-decoration: none;
         font-weight: bold;
         color: #000;
@@ -1360,7 +1788,7 @@ main {
         font-weight: lighter;
         color: rgb(153, 153, 153);
         position: relative;
-        left: 47px;
+        left: 57px;
         top: -14px;
     }
     
@@ -1376,11 +1804,44 @@ main {
         font-weight: bold;
     }
 
+    .messages {
+        overflow-y: scroll;
+        scrollbar-color: black;
+        scroll-padding: 10px;
+    }
+
+    .messages-item {
+        margin-top: 10px; 
+        height: 80px;
+    }
+
+    .messages-item p{
+        position: relative; 
+        left: 59px; 
+        top: -45px
+    }
+
     .messages-search {
         position:relative;
         left: 30%;
         top: 20px;
         width: 88%;
+    }
+
+    .lists-container {
+        top: 60px;
+      }
+
+      .profile-background {
+        position: relative;
+        top: 20px;
+        left: 30.3%;
+        width: 69.5%;
+        height: 180px;
+        background-image: url(/images/kapak.jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .profile-box {
@@ -1391,9 +1852,17 @@ main {
         width: 68.5%;
     }
 
+    .profile-box img {
+        width: 115px; height: 115px;
+        border-radius: 50%; 
+        border: 3px solid white; 
+        margin-left: 5px;
+        margin-top: -15px;
+    }
+
     .edit-profile-btn {
         position: absolute;
-        top: 77px;
+        top: 60px;
         right: 15px;
         border-radius: 20px;
         background-color: white;
@@ -1407,13 +1876,86 @@ main {
         position: relative;
         width: 68.5%;
         left: 30.9%;
+        top: -20px;
+    }
+
+    .profile-user-box p {
+        margin-left: 10px;
+    }
+
+    #dot {
+        position: relative;
+        top: -2px;
+        left: 10px;
+    }
+
+    #days {
+        position: relative;
+        left: 35px;
+        top: -20px;
+    }
+
+    .profile-text {
+        position: relative;
+        left: 25px;
+        top: -20px;
+    }
+
+    .profile-text-2 {
+        position: relative;
+        left: 40px;
+        top: -19px;
+    }
+
+    .user-follow {
+        position: relative;
         top: -10px;
     }
 
-    .profile-user-box i {
-        position: relative;
-        top: -1px;
+    .profile-twet {
+        border-top: .1px solid rgb(218, 218, 218);
+        top: -5px;
     }
 
-       
+    .profile-twet img {
+      position: relative;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      top: 14px;
+      left: -150px;
+    }
+
+    .pinned {
+    font-size: 1.5vh;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 10px;
+    top: -3px;
+    }
+
+    #pinned {
+        position: relative;
+        top: -5px;
+        left: 30px;
+    }
+
+    .profile-twet a{
+        position: relative;
+        left: -140px;
+        top: -5px;
+    }
+
+    .profile-twet p{
+        position: relative;
+        left: 57px;
+        top: -5px;
+    }
+
+    #listIcon {
+        position: absolute; 
+        top: 7px;
+        left: -5px; 
+    }    
+
 }

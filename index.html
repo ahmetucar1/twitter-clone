@@ -13,51 +13,45 @@
 <body>
     <header>
         <div class="fixed">
-           <button class="active-btn" onclick="activeSidebar()"> <img width="30" height="35px" style="border-radius: 50%; margin:15px 7px;"  src="images/profile.jpg" alt=""> </button>
+           <button class="active-btn" onclick="activeSidebar()"> <img src="images/profile.jpg" alt=""> </button>
             <h1>Home</h1>
             <i class="fa-regular fa-star"></i>
          </div>
-         <div class="fixed-mobile">
-            <button class="active-btn" onclick="activeSidebar()"> 
-                <img width="30" height="35px" style="border-radius: 50%; margin:15px 7px;"  src="images/profile.jpg" alt=""> 
-            </button>
-             <h1>Home</h1>
-             <i class="fa-regular fa-star"></i>
-          </div>
         <div class="public">
          <div id="sidebarLeftMobile">
-            <h2 style="position: absolute; font-size: 15px; margin-left:-15px; margin-top: 15px; top: 0;">Account İnfo</h2>
+            <h2>Account İnfo</h2>
             <button type="button" onclick="closeSidebar()" id="close" aria-hidden="true">&times;</button>
-            <a href="">
-                  <img height="45px" width="35px" style="border-radius: 50%;" src="images/profile.jpg" alt="">
-            </a>
+            <a href=""><img class="circle-img" src="images/profile.jpg" alt=""></a>
             <i id="plus" class="fa-light fa-plus"></i>
-            <p><strong>Yılmaz</strong> <br> <span style="padding: 0; color: gray;">@userylmz</span>
-            <br> <br> <strong>500</strong> <span style="padding: 0;">Fallowing</span style="padding:0;"> <strong>400</strong> <span style="padding: 0;">Fallowers</span> </p>
-            <a href="profile.html"><i class="fa-regular fa-user"></i><span>Profile</span></a> 
-            <a href="lists.html"><i class="fa-solid fa-list"></i><span>Lists</span></a>
-            <a href="explore.html"><i class="fa-solid fa-location-dot"></i><span>Topics</span></a>
-            <a href="bookmarks.html"><i class="fa-regular fa-bookmark"></i><span>Bookmarks</span></a>
-            <a href=""><i class="fa-solid fa-bolt"></i><span>Moments</span></a>
-            <a href=""><i class="fa-regular fa-newspaper"></i><span>NewsLetters</span></a>
-            <a href=""><i class="fa-solid fa-rocket"></i><span>Proffessionals</span></a>
-            <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Twitter Ads</span></a>
-            <a href=""><i class="fa-solid fa-chart-simple"></i><span>Analytics</span></a>
-            <a href=""><i class="fa-solid fa-gear"></i><span>Setting & Privacy</span></a>
-            <a href=""><i class="fa-solid fa-question"></i><span style="padding-left: 25px;">Help Center</span></a>
-            <a href=""><i class="fa-solid fa-database"></i><span>Data Saver</span>
-            <label class="toggle-switch">
-            <input type="checkbox" checked>
-            <span class="switch-box circle"></span>
-            </label>
-            </a>
-            <a href=""><i class="fa-solid fa-display"></i><span style="padding-left: 14px;">Display</span></a>
-            <hr>
-            <a href=""><span>Log out</span></a>
+            <div class="user-info" ><p>Yılmaz</p></div>
+            <span class="username" >@userylmz</span>
+            <div class="user-follow-info"><p class="bold"> 500 <span class="light">Following </span> 400 <span class="light">Followers</span></p></div>
+            <div class="navbar-mobile">
+                <a href="profile.html"><i class="fa-regular fa-user"></i><span>Profile</span></a> 
+                <a href="lists.html"><i class="fa-solid fa-list"></i><span>Lists</span></a>
+                <a href="explore.html"><i class="fa-solid fa-location-dot"></i><span>Topics</span></a>
+                <a href="bookmarks.html"><i class="fa-regular fa-bookmark"></i><span>Bookmarks</span></a>
+                <a href=""><i class="fa-solid fa-bolt"></i><span>Moments</span></a>
+                <a href=""><i class="fa-regular fa-newspaper"></i><span>NewsLetters</span></a>
+                <a href=""><i class="fa-solid fa-rocket"></i><span>Proffessionals</span></a>
+                <a href=""><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Twitter Ads</span></a>
+                <a href=""><i class="fa-solid fa-chart-simple"></i><span>Analytics</span></a>
+                <a href=""><i class="fa-solid fa-gear"></i><span>Setting & Privacy</span></a>
+                <a href=""><i class="fa-solid fa-question"></i><span>Help Center</span></a>
+                <a href=""><i class="fa-solid fa-database"></i><span>Data Saver</span>
+                <label class="toggle-switch">
+                <input type="checkbox" checked>
+                <span class="switch-box circle"></span>
+                </label>
+                </a>
+                <a href=""><i class="fa-solid fa-display"></i><span >Display</span></a>
+                <hr>
+                <a href=""><span>Log out</span></a>
+            </div>
         </div>   
         <div class="sidebar-left">
         <div class="navbar">
-         <a href="index.html"><i><img width="30" src="images/Twitter-logo.svg"  alt=""></i></a>
+         <a href="index.html"><i><img width="35px" src="images/Twitter-logo.svg"  alt=""></i></a>
          <a href="index.html"><i class="fa-solid fa-house-chimney-window"></i><span style="font-weight: bold; font-size:2.6vh;">Home</span></a>
          <a href="explore.html"><i class="fa-regular fa-hashtag"></i><span>Explore</span></a>
          <a href="notifications.html"><i class="fa-regular fa-bell"></i><span>Notifications</span></a>
@@ -71,14 +65,12 @@
         </div>
     </div>
          <div class="sidebar-sub">
-            <img height="55px" width="45px" style="border-radius: 50%;" src="images/profile.jpg" alt="">
-            <p><strong>Mehmet</strong><br> <span style="color:rgba(128, 128, 128, 0.796);">@userylmz</span></p>
-            <p style="float:right; margin-left:-5px; font-weight: bold;
-            font-size: 2vh;">...</p>
+            <img class="circle-img" src="images/profile.jpg" alt="">
+            <p><strong>Mehmet</strong><br> <span class="gray1">@userylmz</span></p>
          </div>
          <div class="sidebar-top">
-         <div style="display: flex;">
-            <img style="margin-left: 15px; border-radius: 50%;" width="45" height="55px" src="images/profile.jpg" alt="">
+         <div class="sidebar-top-item">
+            <img class="circle-img" src="images/profile.jpg" alt="">
             <input placeholder="What's happening?" type="text">
          </div>
          <div class="sidebar-top-icon">
@@ -101,165 +93,210 @@
             <a href="messages.html"><i class="fa-regular fa-envelope"></i></a>
         </div>
     </div>
-    <div class="rightbox">
-        <div class="search-container">
-            <form action="">
-              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-              <input type="text" placeholder="Search Twitter" name="search">
-            </form>
-          </div>
-          <div class="trend-container">
-           <h2 style="font-size: 2.4vh; padding-left:15px; padding-top: 10px;">Trends for you</h2>
-            <div class="trendbox">
-            <a href="">#FatihTerim
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <div class="trendbox">
-            <a href="">#Türkiye
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <div class="trendbox">
-            <a href="">#Cumhurbaşkanı
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <div class="trendbox">
-            <a href="">#Millet İttifakı
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-             <div class="trendbox">
-            <a href="">#Aydın
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <div class="trendbox">
-            <a href="">#Mersin
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <div class="trendbox">
-            <a href="">#Atatürk
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <div class="trendbox">
-            <a href="">#Osmanlı
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <div class="trendbox">
-            <a href="">#Twitter
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <div class="trendbox">
-            <a href="">#Youtube
-            <p>40.1K Tweets</p>
-            <button style="float: right;">...</button>
-            </a>
-           </div>
-           <a style="font-weight: normal; position:relative; top: -5px; color:rgb(29, 155, 240);" href="">Show more</a>
-          </div>
-          <div onclick="activeMessages()" class="messages-container">
-            <h2 style="padding-left:10px; font-size: 2.3vh;">Messages</h2>
-            <div class="messages-icon-box">
-             <a href=""><i class="fa-solid fa-envelope-circle-check"></i></a>
-             <a href=""><i class="fa-solid fa-chevron-up"></i></a>
-            </div>
-           </div>
-            <div id="onMessageBox">
-             <h3 style="margin-left: 10px;">Messages</h3>
-             <i onclick="offMessageBox()" id="off" style="float:right; margin-right:10px; position:relative; top:-40px;" class="fa-solid fa-x"></i>
-             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
-                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
-                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
-                 </a>
-                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
-             </div>
-             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
-                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
-                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
-                 </a>
-                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
-             </div>
-             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
-                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
-                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
-                 </a>
-                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
-             </div>
-             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
-                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
-                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
-                 </a>
-                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
-             </div>
-             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
-                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
-                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
-                 </a>
-                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
-             </div>
-             <div style="height: 80px; width: 98%; position: relative; left: 5px; top: -10px;" class="tweet-box">
-                 <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/profil1.webp" alt="">
-                 <a href="">Kemal <span>@kmlfln . 7 Sep</span>
-                 </a>
-                 <p style="position: relative; left: 49px; top: -45px;" ><span>You awesome</span></p>
-             </div>
-            </div>
-          <div class="follow-container">
-            <h2 style="font-size: 2.4vh; padding-left:15px; padding-top: 10px;">Who to follow</h2>
-            <div class="followbox">
-            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/follow.jpg" alt="">
-            <a href="">Mehmet Yılmaz
-            <p>@mhmtylmz</p>
-            <button style="float: right;">Follow</button>
-            </a>
-          </div>
-          <div class="followbox">
-            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/follow.jpg" alt="">
-            <a href="">Mehmet Yılmaz
-            <p>@mhmtylmz</p>
-            <button style="float: right;">Follow</button>
-            </a>
-          </div>
-          <div class="followbox">
-            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/follow.jpg" alt="">
-            <a href="">Mehmet Yılmaz
-            <p>@mhmtylmz</p>
-            <button style="float: right;">Follow</button>
-            </a>
-          </div>
-          <a style="font-weight: normal; position:relative; top: -5px; left: 10px; color:rgb(29, 155, 240); text-decoration: none;" href="">Show more</a>
-          </div>
-          <div class="footer">
-           <a href="">Terms Of Service</a>
-           <a href="">Privacy Pollicy</a>
-           <a href="">Cookie Pollicy</a>
-           <a href="">Imprint</a>
-           <a href="">Accessibility</a>
-           <a href="">Ads info</a>
-           <a href="">More...</a>
-           <p>©2022 Twitter, Inc</p>
-          </div>
-          <div class="empty">
-          </div>
     </header>
+
     <main>
-        <div class="tweet-box">
-            <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/follow.jpg" alt="">
+        <div class="sticky">
+            <div class="rightbox">
+                <div class="search-container">
+                    <form action="">
+                      <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                      <input type="text" placeholder="Search Twitter" name="search">
+                    </form>
+                  </div>
+                  <div class="trend-container">
+                   <h2>Trends for you</h2>
+                    <div class="trendbox">
+                    <a href="">#FatihTerim
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <div class="trendbox">
+                    <a href="">#Türkiye
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <div class="trendbox">
+                    <a href="">#Cumhurbaşkanı
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <div class="trendbox">
+                    <a href="">#Millet İttifakı
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                     <div class="trendbox">
+                    <a href="">#Aydın
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <div class="trendbox">
+                    <a href="">#Mersin
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <div class="trendbox">
+                    <a href="">#Atatürk
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <div class="trendbox">
+                    <a href="">#Osmanlı
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <div class="trendbox">
+                    <a href="">#Twitter
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <div class="trendbox">
+                    <a href="">#Youtube
+                    <p>40.1K Tweets</p>
+                    <button>...</button>
+                    </a>
+                   </div>
+                   <span class="show-more" href="">Show more</span>
+                  </div>
+                  <div onclick="activeMessages()" class="messages-container">
+                    <h2>Messages</h2>
+                    <div class="messages-icon-box">
+                     <a href=""><i class="fa-solid fa-envelope-circle-check"></i></a>
+                     <a href=""><i class="fa-solid fa-chevron-up"></i></a>
+                    </div>
+                   </div>
+                    <div id="onMessageBox">
+                     <h3>Messages</h3>
+                     <i onclick="offMessageBox()" id="off" class="fa-solid fa-x"></i>
+                     <div class="messages-box">
+                         <img  class="circle-img" src="images/profil1.webp" alt="">
+                         <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                         </a>
+                         <p>You awesome</p>
+                     </div>
+                     <div class="messages-box">
+                        <img  class="circle-img" src="images/profil1.webp" alt="">
+                        <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                        </a>
+                        <p>You awesome</p>
+                    </div>
+                    <div class="messages-box">
+                        <img  class="circle-img" src="images/profil1.webp" alt="">
+                        <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                        </a>
+                        <p>You awesome</p>
+                    </div>
+                    <div class="messages-box">
+                        <img  class="circle-img" src="images/profil1.webp" alt="">
+                        <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                        </a>
+                        <p>You awesome</p>
+                    </div>
+                    <div class="messages-box">
+                        <img  class="circle-img" src="images/profil1.webp" alt="">
+                        <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                        </a>
+                        <p>You awesome</p>
+                    </div>
+                    <div class="messages-box">
+                        <img  class="circle-img" src="images/profil1.webp" alt="">
+                        <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                        </a>
+                        <p>You awesome</p>
+                    </div>
+                    <div class="messages-box">
+                        <img  class="circle-img" src="images/profil1.webp" alt="">
+                        <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                        </a>
+                        <p>You awesome</p>
+                    </div>
+                    <div class="messages-box">
+                        <img  class="circle-img" src="images/profil1.webp" alt="">
+                        <a href="">Kemal <span>@kmlfln . 7 Sep</span>
+                        </a>
+                        <p>You awesome</p>
+                    </div>
+                    </div>
+                  <div class="follow-container explore-follow">
+                    <h2>Who to follow</h2>
+                    <div class="followbox">
+                    <img class="circle-img-2" src="images/follow.jpg" alt="">
+                    <a href="">Mehmet Yılmaz
+                    <p>@mhmtylmz</p>
+                    <button style="float: right;">Follow</button>
+                    </a>
+                  </div>
+                  <div class="followbox">
+                    <img class="circle-img-2" src="images/follow.jpg" alt="">
+                    <a href="">Mehmet Yılmaz
+                    <p>@mhmtylmz</p>
+                    <button style="float: right;">Follow</button>
+                    </a>
+                  </div>
+                  <div class="followbox">
+                    <img class="circle-img-2" src="images/follow.jpg" alt="">
+                    <a href="">Mehmet Yılmaz
+                    <p>@mhmtylmz</p>
+                    <button style="float: right;">Follow</button>
+                    </a>
+                  </div>
+                  <span class="show-more" href="">Show more</span>
+                  </div>
+                  <div class="footer">
+                   <a href="">Terms Of Service</a>
+                   <a href="">Privacy Pollicy</a>
+                   <a href="">Cookie Pollicy</a>
+                   <a href="">Imprint</a>
+                   <a href="">Accessibility</a>
+                   <a href="">Ads info</a>
+                   <a href="">More...</a>
+                   <p>©2022 Twitter, Inc</p>
+                  </div>
+                  <div class="empty">
+                  </div>
+            </div>
+        </div>
+       
+        <div class="tweets-container">
+            <div class="tweet-box">
+                <img  class="circle-img-3" src="images/follow.jpg" alt="">
+                <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
+                    </a>
+                    <p>Bugün cenazede helvanın yanına dondurma istedim.</p>
+                    <div class="tweet-icon-box">
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-solid fa-retweet"></i>
+                        <i id="like" class="fa-solid fa-heart"></i>
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i> 
+                    </div>
+            </div>
+            <div class="tweet-box">
+              <img  class="circle-img-3" src="images/follow.jpg" alt="">
+              <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
+                  </a>
+                  <p>Çabuk işinizi gücünüzü bırakıp bi şeyler bi şeyler</p>
+                  <div class="tweet-img-box">
+                    <img  class="tweet-img" src="images/twet-img.jpg" alt="">
+                  </div>
+                  <div class="tweet-icon-box">
+                      <i class="fa-regular fa-comment"></i>
+                      <i class="fa-solid fa-retweet"></i>
+                      <i class="fa-solid fa-heart"></i>
+                      <i class="fa-solid fa-arrow-up-from-bracket"></i> 
+                  </div>
+          </div>
+          <div class="tweet-box">
+            <img  class="circle-img-3" src="images/follow.jpg" alt="">
             <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
                 </a>
                 <p>Bugün cenazede helvanın yanına dondurma istedim.</p>
@@ -271,31 +308,102 @@
                 </div>
         </div>
         <div class="tweet-box">
-          <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/follow.jpg" alt="">
+          <img  class="circle-img-3" src="images/follow.jpg" alt="">
           <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
               </a>
               <p>Çabuk işinizi gücünüzü bırakıp bi şeyler bi şeyler</p>
               <div class="tweet-img-box">
-                <img  class="tweet-img" width="370px" height="400px" src="images/twet-img.jpg" alt="">
+                <img  class="tweet-img" src="images/twet-img.jpg" alt="">
               </div>
               <div class="tweet-icon-box">
                   <i class="fa-regular fa-comment"></i>
                   <i class="fa-solid fa-retweet"></i>
-                  <i style="color: red;" class="fa-solid fa-heart"><span style="margin-left:15px; color:rgb(177, 177, 177); font-size: 12px;">1</span></i>
+                  <i class="fa-solid fa-heart"></i>
                   <i class="fa-solid fa-arrow-up-from-bracket"></i> 
               </div>
       </div>
       <div class="tweet-box">
-        <img  width="30" height="35px" style="border-radius: 50%; margin:15px 7px;" src="images/follow.jpg" alt="">
+        <img  class="circle-img-3" src="images/follow.jpg" alt="">
         <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
             </a>
             <p>Bugün cenazede helvanın yanına dondurma istedim.</p>
             <div class="tweet-icon-box">
                 <i class="fa-regular fa-comment"></i>
                 <i class="fa-solid fa-retweet"></i>
-                <i class="fa-regular fa-heart"></i>
+                <i id="like" class="fa-regular fa-heart"></i>
                 <i class="fa-solid fa-arrow-up-from-bracket"></i> 
             </div>
+    </div>
+    <div class="tweet-box">
+      <img  class="circle-img-3" src="images/follow.jpg" alt="">
+      <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
+          </a>
+          <p>Çabuk işinizi gücünüzü bırakıp bi şeyler bi şeyler</p>
+          <div class="tweet-img-box">
+            <img  class="tweet-img" src="images/twet-img.jpg" alt="">
+          </div>
+          <div class="tweet-icon-box">
+              <i class="fa-regular fa-comment"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-solid fa-arrow-up-from-bracket"></i> 
+          </div>
+  </div>
+  <div class="tweet-box">
+    <img  class="circle-img-3" src="images/follow.jpg" alt="">
+    <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
+        </a>
+        <p>Bugün cenazede helvanın yanına dondurma istedim.</p>
+        <div class="tweet-icon-box">
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket"></i> 
+        </div>
+</div>
+<div class="tweet-box">
+  <img  class="circle-img-3" src="images/follow.jpg" alt="">
+  <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
+      </a>
+      <p>Çabuk işinizi gücünüzü bırakıp bi şeyler bi şeyler</p>
+      <div class="tweet-img-box">
+        <img  class="tweet-img" src="images/twet-img.jpg" alt="">
+      </div>
+      <div class="tweet-icon-box">
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-arrow-up-from-bracket"></i> 
+      </div>
+</div>
+<div class="tweet-box">
+    <img  class="circle-img-3" src="images/follow.jpg" alt="">
+    <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
+        </a>
+        <p>Bugün cenazede helvanın yanına dondurma istedim.</p>
+        <div class="tweet-icon-box">
+            <i class="fa-regular fa-comment"></i>
+            <i class="fa-solid fa-retweet"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket"></i> 
+        </div>
+</div>
+<div class="tweet-box">
+  <img  class="circle-img-3" src="images/follow.jpg" alt="">
+  <a href="">Mehmet Yılmaz <span>@mhmtylmz</span>
+      </a>
+      <p>Çabuk işinizi gücünüzü bırakıp bi şeyler bi şeyler</p>
+      <div class="tweet-img-box">
+        <img  class="tweet-img" src="images/twet-img.jpg" alt="">
+      </div>
+      <div class="tweet-icon-box">
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-retweet"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-arrow-up-from-bracket"></i> 
+      </div>
+</div>
+        </div>
     </main>
 </body>
 </html>
