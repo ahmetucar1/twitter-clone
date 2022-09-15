@@ -820,7 +820,7 @@ input[type=text]:focus {
         left: -45%;
         width: 180%;
         height: 200px;
-        background-image: url(/images/explore.jpeg);
+        background-image: url(images/explore.jpeg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -1288,7 +1288,7 @@ input[type=text]:focus {
     left: 16.6%;
     width: 82.8%;
     height: 250px;
-    background-image: url(/images/explore.jpeg);
+    background-image: url(images/explore.jpeg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1693,7 +1693,7 @@ input[type=text]:focus {
         left: 30.1%;
         width: 69.5%;
         height: 300px;
-        background-image: url(/images/explore.jpeg);
+        background-image: url(images/explore.jpeg);
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
